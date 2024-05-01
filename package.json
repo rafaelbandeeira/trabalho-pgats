@@ -1,0 +1,25 @@
+{
+  "name": "trabalho-automacao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --timeout 60000 test/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelbandeeira/trabalho-pgats.git"
+  },
+  "author": "Rafael Bandeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelbandeeira/trabalho-pgats/issues"
+  },
+  "homepage": "https://github.com/rafaelbandeeira/trabalho-pgats#readme",
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}

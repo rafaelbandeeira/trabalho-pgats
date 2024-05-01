@@ -1,4 +1,4 @@
-const { calcularTotal } = require("../../src/compras/compras")
+const { calcularTotal } = require("../../../src/compras/compras")
 const assert = require("node:assert");
 
 describe('Compras', () => {
