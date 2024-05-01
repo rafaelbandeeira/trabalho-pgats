@@ -1,6 +1,6 @@
 function calcularTotal(ferramentas, comprar) {
     let total = 0.00;
-    let totalMatches = 0;
+    const matches = [];
 
     if (ferramentas.length == 0 || comprar.length == 0)
         throw new Error("Ambas as listas precisam ter ao menos um item.");
@@ -9,14 +9,14 @@ function calcularTotal(ferramentas, comprar) {
             for (let index = 0; index < ferramentas.length; index++) {
                 if (ferramentas[index].nome == comprar[indexComprar]) {
                     total += ferramentas[index].preco;
-                    totalMatches++;
-                } else if (totalMatches < 1)
+                    matches[indexComprar] = comprar[indexComprar];
+                } else if (matches.length < 1)
                     throw new Error("Nenhuma ferramenta desejada encontrada.");
             }
         }
     }
 
-    return `O valor a pagar pelas ferramentas (${comprar[0]}, ${comprar[1]}) é R$ ${total.toFixed(2)}`;
+    return `O valor a pagar pelas ferramentas (${matches.join(", ")}) é R$ ${total.toFixed(2)}`;
 }
 
 module.exports = {
